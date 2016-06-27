@@ -1,7 +1,7 @@
 ;(function($, window, document, undefined) {
 	"use strict";
 
-	var image = ["img/duck.jpg","img/locomotive.jpg","img/mesh.jpg","img/squirrel.jpg","img/strawberries.jpg"];
+	var image = [];
 	var indexElem = 0, time;
 
 	function moveNext(){
@@ -34,6 +34,27 @@
 		image.push($('.inpt').val());
 		$('.inpt').val('');
 		e.preventDefault();
-	})
-	
+	});
+
+	function getImageArray(){
+			$.ajax({
+			  url: "server.php",
+			  method: "POST", // default
+			  statusCode: {
+			      404: function() {
+			        alert( "page not found" );
+			      }
+			  },
+			  beforeSend: function( xhr ) {
+			      xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+			  }
+			}).done(function(data) {
+			    var object = jQuery.parseJSON(data);
+			    
+			    console.log(object);
+			    return object;
+			});
+		};
+	$(window).load(getImageArray());
+
 })(jQuery, window, document);
