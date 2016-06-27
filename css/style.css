@@ -1,0 +1,35 @@
+.cont{
+	width: 640px;
+	height: 400px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	background: rgb(23, 127, 69);
+}
+img {
+	width: 100%;
+	height: auto;
+}
+.navig {
+	text-align: center;
+}
+.btn {
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	background: rgb(23, 127, 69);
+	border: 0;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+}
+.btn:hover {
+	background: rgb(45, 255, 139);
+}
+.inpt {
+	padding: 9px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	background: rgb(255, 255, 255);
+	border: 1px solid rgb(23, 127, 69);
+	color: rgb(23, 127, 69);
+}
