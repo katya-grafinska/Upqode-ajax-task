@@ -39,7 +39,7 @@
 	function getImageArray(){
 			$.ajax({
 			  url: "server.php",
-			  method: "POST", // default
+			  method: "POST",
 			  statusCode: {
 			      404: function() {
 			        alert( "page not found" );
